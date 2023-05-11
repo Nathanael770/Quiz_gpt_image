@@ -1,0 +1,8 @@
+Buildfile: C:\Users\natha\Mendix\Training_Tocndix_gpt\Training_gpt\deployment\build_core.xml
+
+clean:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

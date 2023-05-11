@@ -1,0 +1,11 @@
+Buildfile: C:\Users\natha\OneDrive\Bureau\GPT_Image\gpt_image\gpt_image\deployment\build_core.xml
+
+deploy:
+     [copy] Copying 52 files to C:\Users\natha\OneDrive\Bureau\GPT_Image\gpt_image\gpt_image\deployment
+     [copy] Copying 66 files to C:\Users\natha\OneDrive\Bureau\GPT_Image\gpt_image\gpt_image\deployment\model\lib\userlib
+     [copy] Copying 8 files to C:\Users\natha\OneDrive\Bureau\GPT_Image\gpt_image\gpt_image\deployment\model\resources
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

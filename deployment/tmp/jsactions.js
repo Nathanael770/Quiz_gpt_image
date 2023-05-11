@@ -1,0 +1,2 @@
+export const NanoflowCommons$ShowProgress = async () => (await import("C:/Users/natha/OneDrive/Bureau/GPT_Image/gpt_image/gpt_image/javascriptsource/nanoflowcommons/actions/ShowProgress")).ShowProgress;
+export const NanoflowCommons$HideProgress = async () => (await import("C:/Users/natha/OneDrive/Bureau/GPT_Image/gpt_image/gpt_image/javascriptsource/nanoflowcommons/actions/HideProgress")).HideProgress;

@@ -1,0 +1,16 @@
+Buildfile: C:\Users\natha\OneDrive\Bureau\GPT_Image\gpt_image\gpt_image\deployment\build_core.xml
+
+compile:
+    [javac] Compiling 237 source files to C:\Users\natha\OneDrive\Bureau\GPT_Image\gpt_image\gpt_image\deployment\run\bin
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+
+package:
+      [jar] Building jar: C:\Users\natha\OneDrive\Bureau\GPT_Image\gpt_image\gpt_image\deployment\model\bundles\project.jar
+
+BUILD SUCCESSFUL
+Total time: 11 seconds
+
+

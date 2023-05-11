@@ -1,0 +1,138 @@
+CREATE TABLE "quizcarte$test" (
+	"id" BIGINT NOT NULL,
+	"score" INT NULL,
+	"compteur" INT NULL,
+	"score_pourcentage" DECIMAL(28, 8) NULL,
+	"numero_test" BIGINT NULL,
+	"createddate" TIMESTAMP NULL,
+	PRIMARY KEY("id"));
+CREATE SEQUENCE "quizcarte$test_numero_test_mxseq" AS BIGINT START WITH 1;
+INSERT INTO "mendixsystem$entity" ("id", 
+"entity_name", 
+"table_name", 
+"remote", 
+"remote_primary_key")
+ VALUES ('591654f2-5ff5-4a92-a465-5893eb173359', 
+'QuizCarte.Test', 
+'quizcarte$test', 
+false, 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('8286543c-67af-4b72-ac3d-2db654792ebe', 
+'591654f2-5ff5-4a92-a465-5893eb173359', 
+'Score', 
+'score', 
+3, 
+0, 
+'0', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('71bb1c45-f0c8-4849-aa67-a782ddd1e10d', 
+'591654f2-5ff5-4a92-a465-5893eb173359', 
+'Compteur', 
+'compteur', 
+3, 
+0, 
+'1', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('982519f0-df33-4285-a9eb-5b2aa42eb466', 
+'591654f2-5ff5-4a92-a465-5893eb173359', 
+'Score_Pourcentage', 
+'score_pourcentage', 
+5, 
+0, 
+'0', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('ade8e604-6630-43ce-80d3-6dc36048e082', 
+'591654f2-5ff5-4a92-a465-5893eb173359', 
+'Numero_Test', 
+'numero_test', 
+0, 
+0, 
+'1', 
+true);
+INSERT INTO "mendixsystem$sequence" ("attribute_id", 
+"name", 
+"start_value", 
+"current_value")
+ VALUES ('ade8e604-6630-43ce-80d3-6dc36048e082', 
+'quizcarte$test_numero_test_mxseq', 
+1, 
+0);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('b6f253c7-acc0-30ad-a8f6-79ce2de4fc47', 
+'591654f2-5ff5-4a92-a465-5893eb173359', 
+'createdDate', 
+'createddate', 
+20, 
+0, 
+'', 
+false);
+CREATE TABLE "quizcarte$test_account" (
+	"quizcarte$testid" BIGINT NOT NULL,
+	"administration$accountid" BIGINT NOT NULL,
+	PRIMARY KEY("quizcarte$testid","administration$accountid"),
+	CONSTRAINT "uniq_quizcarte$test_account_quizcarte$testid" UNIQUE ("quizcarte$testid"));
+CREATE INDEX "idx_quizcarte$test_account_administration$account_quizcarte$test" ON "quizcarte$test_account" ("administration$accountid" ASC,"quizcarte$testid" ASC);
+INSERT INTO "mendixsystem$association" ("id", 
+"association_name", 
+"table_name", 
+"parent_entity_id", 
+"child_entity_id", 
+"parent_column_name", 
+"child_column_name", 
+"index_name")
+ VALUES ('cb933740-2044-4ede-942b-2441bca8d5a3', 
+'QuizCarte.Test_Account', 
+'quizcarte$test_account', 
+'591654f2-5ff5-4a92-a465-5893eb173359', 
+'ec66fba1-2aad-4b62-892b-95a146ec7e22', 
+'quizcarte$testid', 
+'administration$accountid', 
+'idx_quizcarte$test_account_administration$account_quizcarte$test');
+INSERT INTO "mendixsystem$unique_constraint" ("name", 
+"table_id", 
+"column_id")
+ VALUES ('uniq_quizcarte$test_account_quizcarte$testid', 
+'cb933740-2044-4ede-942b-2441bca8d5a3', 
+'5c3bcbd5-a507-30e4-8a13-7b9332a53c87');
+UPDATE "mendixsystem$version"
+ SET "versionnumber" = '4.2', 
+"lastsyncdate" = '20230504 15:58:53';
